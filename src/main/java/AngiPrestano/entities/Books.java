@@ -5,5 +5,7 @@ import javax.persistence.Entity;
 @Entity
 public class Books {
     private String author;
+    Generes generes;
+    
 
 }
