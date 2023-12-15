@@ -20,6 +20,7 @@ public class Application {
         BooksDAO bd = new BooksDAO(em);
         Books HarryPotter=new Books("la camera dei segreti", LocalDate.of(2007,4,12),300,"J. K. Rowling", Generes.FANTASY);
         bd.save(HarryPotter);
+
         MagazinesDAO md = new MagazinesDAO(em);
         Magazines Vogue = new Magazines("The fashion Week", LocalDate.of(2023, 12, 6), 50, Periodicity.MENSILE);
         md.save(Vogue);
