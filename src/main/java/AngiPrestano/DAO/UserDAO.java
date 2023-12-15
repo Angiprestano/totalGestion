@@ -11,7 +11,7 @@ public class UserDAO {
     public UserDAO(EntityManager em) {
         this.em = em;
     }
-    
+
     public void save(User user) {
         EntityTransaction transaction = em.getTransaction();
 

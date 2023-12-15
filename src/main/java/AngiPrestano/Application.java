@@ -2,10 +2,8 @@ package AngiPrestano;
 
 import AngiPrestano.DAO.BooksDAO;
 import AngiPrestano.DAO.MagazinesDAO;
-import AngiPrestano.entities.Books;
-import AngiPrestano.entities.Generes;
-import AngiPrestano.entities.Magazines;
-import AngiPrestano.entities.Periodicity;
+import AngiPrestano.DAO.UserDAO;
+import AngiPrestano.entities.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -24,5 +22,8 @@ public class Application {
         MagazinesDAO md = new MagazinesDAO(em);
         Magazines Vogue = new Magazines("The fashion Week", LocalDate.of(2023, 12, 6), 50, Periodicity.MENSILE);
         md.save(Vogue);
+        UserDAO ud = new UserDAO(em);
+        User Angi = new User("Angela", "Prestano", LocalDate.of(1999, 10, 26));
+        ud.save(Angi);
     }
 }
