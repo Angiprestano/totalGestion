@@ -8,10 +8,10 @@ import java.time.LocalDate;
 public abstract class principalElement {
     @Id
     @GeneratedValue
-    private long id;
-    private String title;
-    private LocalDate yearPublished;
-    private int numberPage;
+    protected long id;
+    protected String title;
+    protected LocalDate yearPublished;
+    protected int numberPage;
 
     public principalElement() {
     }
